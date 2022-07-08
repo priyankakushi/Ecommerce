@@ -32,6 +32,10 @@ let User = mongoose.Schema({
     userType:{
         type: String,
         enum: [userTypes.CUSTOMER, userTypes.SELLER]
+    },
+    isVerified : {
+        type : Boolean,
+        default : false        
     }
 })
 

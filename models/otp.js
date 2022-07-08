@@ -1,3 +1,4 @@
+const { boolean } = require("joi")
 let mongoose = require("mongoose")
 
 
@@ -16,6 +17,10 @@ const otpSchema = mongoose.Schema({
         type: Date,
         required: true
     },
+    isUsed:{
+        type: boolean,
+        default: false
+    }
 })
 
 
